@@ -10,20 +10,6 @@ Card = collections.namedtuple('Card', ['rank', 'suit'])
 class FrenchDeck:
     """
     By implenting __len__ and __getitem__, you leverage the Python Data Model
-    >>> deck = FrenchDeck()
-    >>> len(deck) # what __len__ provides
-    52
-
-    >>> deck[0] # what __getitem__ provides
-    Card(rank='2', suit='spades')
-
-    >>> deck[:2] # with slicing supported
-    [Card(rank='2', suit='spades'), Card(rank='3', suit='spades')]
-
-    >>> for card in reversed(deck): # with iteration supported
-    ...     print(card);
-    ...     break
-    Card(rank='A', suit='hearts')
     """
     ranks = [str(n) for n in range(2, 11)] + list('JQKA')
     suits = 'spades diamonds clubs hearts'.split()
@@ -33,9 +19,27 @@ class FrenchDeck:
                                         for rank in self.ranks]
 
     def __len__(self):
+        """
+        >>> deck = FrenchDeck()
+        >>> len(deck) # what __len__ provides
+        52
+        """
         return len(self._cards)
 
     def __getitem__(self, position):
+        """
+        >>> deck = FrenchDeck()
+        >>> deck[0] # what __getitem__ provides
+        Card(rank='2', suit='spades')
+
+        >>> deck[:2] # with slicing supported
+        [Card(rank='2', suit='spades'), Card(rank='3', suit='spades')]
+
+        >>> for card in reversed(deck): # with iteration supported
+        ...     print(card);
+        ...     break
+        Card(rank='A', suit='hearts')
+        """
         return self._cards[position]
 
 
