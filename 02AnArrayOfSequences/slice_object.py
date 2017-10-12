@@ -24,8 +24,8 @@ subscript operator, and it produces a slice object: slice(a, b, c)
 >>> for item in items:
 ...     print(item[UNIT_PRICE], item[DESC])
 ... 
-('    $17.50  ', 'Pimoroni PiBrella                 ')
-('     $4.95  ', '6mm Tactile Switch x20            ')
+    $17.50   Pimoroni PiBrella                 
+     $4.95   6mm Tactile Switch x20            
 """
 
 if __name__ == "__main__":
