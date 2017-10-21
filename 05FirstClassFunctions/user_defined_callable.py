@@ -2,9 +2,9 @@
 Arbitrary Python objects can be made to behave like functions.
 Implementing a __call__ instance method is all it takes.
 >>> bingo = BingoCage([1, 1, 1])
->>> bingo.pick() # what __call__ provides
+>>> bingo.pick()
 1
->>> bingo()
+>>> bingo() # what __call__ provides
 1
 """
 import random
