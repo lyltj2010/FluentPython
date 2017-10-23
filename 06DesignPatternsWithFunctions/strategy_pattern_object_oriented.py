@@ -80,7 +80,8 @@ class BulkItemPromo(Promotion):
 class LargeOrderPromo(Promotion):
     """7% discount for orders with 10 or more distinct items"""
     def discount(self, order):
-        if(len(order.cart)) >= 10:
+        distinct_items = {item.product for item in order.cart}
+        if(len(distinct_items)) >= 10:
             return order.total() * 0.07
         return 0
 
