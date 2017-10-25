@@ -1,7 +1,5 @@
 ## First Class Functions
 
-## Snippets
-
 #### callable
 
 The seven flavors of callable objects[i.e. `()` operator]:

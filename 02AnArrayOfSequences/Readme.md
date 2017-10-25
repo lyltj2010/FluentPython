@@ -2,8 +2,6 @@
 
 Some genric operations on sequences.
 
-## Snippets
-
 #### Built-in Sequences
 
 Container sequences:

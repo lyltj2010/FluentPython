@@ -2,9 +2,8 @@
 
 > You can think of the Data Model as a description of Python as a **framework**. It formalizes the interfaces of the building blocks of the languages itself, such as sequences, iterators, functions, classes, context managers and so on.
 
-## Snippets
 
-How special methods are used?
+### How special methods are used?
 
 > The first thing to know about special methods is that the are meant to be called by the Python interpreter, and not by you. You don't write `my_object.__len__()`. You write `len(my_object)` and if `my_object` is an instance of a user defined class, then Pyhton calls the `__len__` instance method you implemented.
 
