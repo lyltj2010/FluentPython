@@ -10,6 +10,8 @@
 <Order total: 57.00 due: 54.15>
 >>> Order(joe, cart, bulk_item_promo)
 <Order total: 57.00 due: 54.00>
+>>> best_promo(Order(joe, cart))
+3.0
 """
 
 from collections import namedtuple
@@ -74,6 +76,12 @@ def large_order_promo(order):
     if len(discount_items) >= 10:
         return order.total() * 0.07
     return 0
+
+promos = [fidelity_promo, bulk_item_promo, large_order_promo]
+def best_promo(order):
+    """select best discount available"""
+    return max(promo(order) for promo in promos)
+
 
 if __name__ == "__main__":
     import doctest
