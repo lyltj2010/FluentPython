@@ -1,5 +1,5 @@
 """
-list.sort sort a list in place and return None
+list.sort sort a list **in place** and return **None**
 Important Python API:
     Functions or methods that change an object in-place should return None
     to make it clear to the caller that the object itself was changed, and
@@ -13,7 +13,9 @@ Important Python API:
 >>> shuffle(a) == None
 True
 
-sorted(support any iterable object) create a new list and return it
+sorted(support any iterable object) create a new list and return it.
+key: A one-argument function that will be applied to each item to
+produce its sorting key, like key=str.lower key=len
 >>> fruits = ['grape', 'raspberry', 'apple', 'banana']
 >>> sorted(fruits, reverse=True)
 ['raspberry', 'grape', 'banana', 'apple']

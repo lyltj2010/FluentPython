@@ -26,7 +26,7 @@
 2
 
 
-# Using * to grab excess items
+# Using * to grab excess items, *args
 >>> a, b, *rest = range(5)
 >>> a, b, rest
 (0, 1, [2, 3, 4])

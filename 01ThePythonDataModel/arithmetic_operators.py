@@ -45,14 +45,15 @@ class Vector:
         y = self.y + other.y
         return Vector(x, y)
 
-    def __mul__(self, other):
+    def __mul__(self, scalar):
         """
         >>> Vector(1, 1) * 3 # test __mul__
         Vector(3, 3)
         """
-        x = other * self.x
-        y = other * self.y
+        x = scalar * self.x
+        y = scalar * self.y
         return Vector(x, y)
+
 
 if __name__ == "__main__":
     import doctest
